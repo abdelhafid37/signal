@@ -1,9 +1,11 @@
+import Container from "@/components/ui/Container";
+
 export default function Home() {
   return (
-    <div className="p-4">
+    <Container>
       <h1 className="font-bold tracking-tight text-display-xl font-display">
         Land the inbox.
       </h1>
-    </div>
+    </Container>
   );
 }
