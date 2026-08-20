@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/layout/NavBar";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
@@ -31,8 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.variable} ${inter.variable} ${IBMPlexMono.variable}`}
+        className={`${spaceGrotesk.variable} ${inter.variable} ${IBMPlexMono.variable} font-body text-ink`}
       >
+        <NavBar />
         {children}
       </body>
     </html>

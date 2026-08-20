@@ -2,7 +2,7 @@ import { cn } from "@/lib/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 import React from "react";
 
-const button = cva(
+export const button = cva(
   "inline-flex items-center justify-center uppercase font-mono",
   {
     variants: {
