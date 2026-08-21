@@ -5,33 +5,29 @@ import Container from "../ui/Container";
 import { button } from "../ui/Button";
 import Link from "next/link";
 import { cn } from "@/lib/cn";
-
-const links = [
-  { number: "01", label: "Home", href: "/" },
-  { number: "02", label: "Work", href: "/" },
-  { number: "03", label: "Services", href: "/" },
-  { number: "04", label: "About", href: "/" },
-  { number: "05", label: "Contact", href: "/" },
-];
+import { navLinks } from "@/lib/data";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="border-b border-border">
+    <nav className="sticky top-0 z-50 border-b border-border bg-bg">
       <Container className="flex items-center justify-between py-6">
-        <Link href="/" className="font-bold uppercase font-display">
-          Signal
+        <Link href="/" className="font-bold font-display">
+          SIGNAL
         </Link>
 
         <ul className="items-center justify-center hidden gap-x-8 lg:flex">
-          {links.map((link) => (
-            <li key={link.number}>
+          {navLinks.map((link, index) => (
+            <li key={link.href}>
               <Link
                 href={link.href}
                 className="uppercase font-mono tracking-wide text-[13px]"
               >
-                <span className="text-accent">{link.number}</span> {link.label}
+                <span className="text-accent">
+                  {String(index + 1).padStart(2, "0")}
+                </span>{" "}
+                {link.label}
               </Link>
             </li>
           ))}
@@ -63,13 +59,15 @@ export default function NavBar() {
         <div className="border-t lg:hidden border-border">
           <Container className="flex flex-col py-6 gap-y-8">
             <ul className="flex flex-col items-center justify-center gap-y-8">
-              {links.map((link) => (
-                <li key={`mobile-${link.number}`}>
+              {navLinks.map((link, index) => (
+                <li key={`mobile-${link.href}`}>
                   <Link
                     href={link.href}
-                    className="uppercase font-mono tracking-wide text-[13px]"
+                    className="font-mono text-base tracking-wide uppercase"
                   >
-                    <span className="text-accent">{link.number}</span>{" "}
+                    <span className="text-accent">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>{" "}
                     {link.label}
                   </Link>
                 </li>

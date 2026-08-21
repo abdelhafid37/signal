@@ -1,5 +1,5 @@
 import Container from "@/components/ui/Container";
-import Eyebrow from "@/components/ui/Eyebrow";
+// import Eyebrow from "@/components/ui/Eyebrow";
 import Heading from "@/components/ui/Heading";
 
 export default function Home() {
@@ -19,10 +19,10 @@ export default function Home() {
         Land the inbox.
       </Heading>
 
-      <Eyebrow>Creative Portfolio</Eyebrow>
+      {/* <Eyebrow>Creative Portfolio</Eyebrow>
       <div className="p-2 bg-ink">
         <Eyebrow isDark>Creative Portfolio 2</Eyebrow>
-      </div>
+      </div> */}
     </Container>
   );
 }
