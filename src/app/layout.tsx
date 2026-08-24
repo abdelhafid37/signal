@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.variable} ${inter.variable} ${IBMPlexMono.variable} font-body text-ink`}
+        className={`${spaceGrotesk.variable} ${inter.variable} ${IBMPlexMono.variable} font-body text-ink bg-bg`}
       >
         <NavBar />
         {children}
