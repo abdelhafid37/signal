@@ -45,12 +45,15 @@ export default function NavBar() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
-          className="flex lg:hidden"
+          className="flex items-center gap-x-2 lg:hidden"
         >
           <span className="w-5 h-3.5 flex flex-col justify-between">
             <span className="h-0.5 bg-ink block" />
             <span className="h-0.5 bg-ink block" />
             <span className="h-0.5 bg-ink block" />
+          </span>
+          <span className="font-mono text-[11px] uppercase tracking-wide">
+            {isOpen ? "Close" : "Menu"}
           </span>
         </button>
       </Container>
