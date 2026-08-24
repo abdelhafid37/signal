@@ -1,5 +1,6 @@
 import { cn } from "@/lib/cn";
 import type { ReactNode } from "react";
+import Dot from "./Dot";
 
 export default function Eyebrow({
   children,
@@ -18,7 +19,7 @@ export default function Eyebrow({
         className,
       )}
     >
-      <span className="bg-current size-1.5 shrink-0" />
+      <Dot isSquare className="bg-current" />
       {children}
     </span>
   );

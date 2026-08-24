@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "../ui/Container";
 import { navLinks } from "@/lib/data";
+import Dot from "../ui/Dot";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,10 +25,8 @@ export default function Footer() {
 
               <ul className="flex flex-col gap-y-2.5">
                 {navLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link href={link.href} className="text-sm font-body">
-                      {link.label}
-                    </Link>
+                  <li key={link.href} className="text-sm font-body">
+                    <Link href={link.href}>{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -55,7 +54,7 @@ export default function Footer() {
             &copy; {currentYear} Signal Studio. All rights reserved.
           </p>
           <p className="flex items-center font-mono text-xs gap-x-2">
-            <span className="bg-tally size-1.5 rounded-full shrink-0 animate-pulse" />
+            <Dot className="bg-tally animate-pulse" />
             Available for projects
           </p>
         </div>
