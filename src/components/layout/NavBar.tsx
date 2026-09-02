@@ -20,24 +20,15 @@ export default function NavBar() {
         <ul className="items-center justify-center hidden gap-x-8 lg:flex">
           {navLinks.map((link, index) => (
             <li key={link.href}>
-              <Link
-                href={link.href}
-                className="uppercase font-mono tracking-wide text-[13px]"
-              >
-                <span className="text-accent">
-                  {String(index + 1).padStart(2, "0")}
-                </span>{" "}
-                {link.label}
+              <Link href={link.href} className="uppercase font-mono tracking-wide text-[13px]">
+                <span className="text-accent">{String(index + 1).padStart(2, "0")}</span> {link.label}
               </Link>
             </li>
           ))}
         </ul>
 
-        <Link
-          href="/"
-          className={cn(button({ size: "sm" }), "hidden lg:inline-flex")}
-        >
-          Start a project
+        <Link href="/contact" className={cn(button({ size: "sm" }), "hidden lg:inline-flex")}>
+          Start a Project
         </Link>
 
         <button
@@ -52,9 +43,7 @@ export default function NavBar() {
             <span className="h-0.5 bg-ink block" />
             <span className="h-0.5 bg-ink block" />
           </span>
-          <span className="font-mono text-[11px] uppercase tracking-wide">
-            {isOpen ? "Close" : "Menu"}
-          </span>
+          <span className="font-mono text-[11px] uppercase tracking-wide">{isOpen ? "Close" : "Menu"}</span>
         </button>
       </Container>
 
@@ -64,21 +53,15 @@ export default function NavBar() {
             <ul className="flex flex-col items-center justify-center gap-y-8">
               {navLinks.map((link, index) => (
                 <li key={`mobile-${link.href}`}>
-                  <Link
-                    href={link.href}
-                    className="font-mono text-base tracking-wide uppercase"
-                  >
-                    <span className="text-accent">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>{" "}
-                    {link.label}
+                  <Link href={link.href} className="font-mono text-base tracking-wide uppercase">
+                    <span className="text-accent">{String(index + 1).padStart(2, "0")}</span> {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
 
-            <Link href="/" className={button({ size: "md" })}>
-              Start a project
+            <Link href="/contact" className={button({ size: "md" })}>
+              Start a Project
             </Link>
           </Container>
         </div>
