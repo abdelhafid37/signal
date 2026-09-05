@@ -61,3 +61,22 @@ export const featuredWork = [
     description: "Lifecycle email flows plus a new site that finally matched the brand.",
   },
 ];
+
+export const testimonials = [
+  {
+    quote:
+      "They handled our site, our reels, and our email flows without ever feeling like three different vendors. That consistency was the whole point.",
+    quoteTablet: "They handled our site, our reels, and our email flows without ever feeling like three vendors.",
+    quoteMobile: "They handled our site, reels, and email without feeling like three vendors.",
+    name: "MARCUS D.",
+    role: "FOUNDER",
+    company: "PLACEHOLDER CO.",
+  },
+  {
+    quote: "Our open rates doubled once Signal took over email. They write like a person, not a marketing template.",
+    quoteTablet: "Our open rates doubled once Signal took over email.",
+    name: "PRIYA N.",
+    role: "HEAD OF GROWTH",
+    company: "PLACEHOLDER BRAND",
+  },
+];
