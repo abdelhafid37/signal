@@ -8,20 +8,16 @@ export default function Footer() {
 
   return (
     <footer className="bg-ink text-bg">
-      <Container className="py-16">
-        <div className="flex flex-col justify-between gap-10 lg:flex-row">
+      <Container className="pt-12 pb-6 md:pt-16 xl:pt-20 md:pb-7 xl:pb-8">
+        <div className="flex flex-col justify-between gap-9 md:gap-0 md:flex-row">
           <div>
             <p className="mb-3 font-bold font-display">SIGNAL</p>
-            <p className="font-body text-sm text-ink-soft max-w-[240px]">
-              Full-channel creative studio.
-            </p>
+            <p className="font-body text-sm text-ink-soft max-w-[240px]">Full-channel creative studio.</p>
           </div>
-
-          <div className="flex gap-16">
+          {/* flex gap-16 */}
+          <div className="flex gap-9 md:gap-12 xl:gap-20">
             <div>
-              <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">
-                Sitemap
-              </p>
+              <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">Sitemap</p>
 
               <ul className="flex flex-col gap-y-2.5">
                 {navLinks.map((link) => (
@@ -33,14 +29,9 @@ export default function Footer() {
             </div>
 
             <div>
-              <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">
-                Contact
-              </p>
+              <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">Contact</p>
               <div className="flex flex-col gap-y-2.5">
-                <a
-                  href="mailto:hello@signalstudio.co"
-                  className="text-sm font-body"
-                >
+                <a href="mailto:hello@signalstudio.co" className="text-sm font-body">
                   hello@signalstudio.co
                 </a>
                 <p className="text-sm font-body">Remote-first · Worldwide</p>
@@ -49,10 +40,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col pt-6 border-t gap-y-4 lg:flex-row lg:items-center lg:justify-between border-white/10 mt-14">
-          <p className="font-mono text-xs text-ink-soft">
-            &copy; {currentYear} Signal Studio. All rights reserved.
-          </p>
+        <div className="flex flex-col pt-6 border-t gap-y-4 md:flex-row md:items-center md:justify-between border-white/10 mt-14">
+          <p className="font-mono text-xs text-ink-soft">&copy; {currentYear} Signal Studio. All rights reserved.</p>
           <p className="flex items-center font-mono text-xs gap-x-2">
             <Dot className="bg-tally animate-pulse" />
             Available for projects
