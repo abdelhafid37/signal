@@ -12,7 +12,7 @@ export default function WorkCard({ description, initials, tags, title }: WorkCar
         {initials} - IMAGE
       </div>
       <h3 className="mb-2 text-lg font-bold font-display">{title}</h3>
-      <div className="flex gap-2 mb-2.5">
+      <div className="flex gap-2 mb-2 xl:mb-2.5">
         {tags.map((tag) => (
           <span key={tag} className="px-3 py-1.5 font-mono text-xs uppercase border border-border bg-surface">
             {tag}
