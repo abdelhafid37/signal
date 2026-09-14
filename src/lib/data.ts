@@ -80,3 +80,69 @@ export const testimonials = [
     company: "PLACEHOLDER BRAND",
   },
 ];
+
+export const servicesFull = [
+  {
+    number: "CH.01",
+    title: "Web Development",
+    description: "Fast, modern websites built to convert — from marketing pages to full product builds.",
+    descriptionShort: "Fast, modern websites built to convert.",
+  },
+  {
+    number: "CH.02",
+    title: "Video Editing",
+    description: "Raw footage into finished cuts — social edits, brand films, ads, and everything between.",
+    descriptionShort: "Raw footage into finished, publish-ready cuts.",
+  },
+  {
+    number: "CH.03",
+    title: "Social Media Mgmt",
+    description: "Content calendars, posting, and community management that keeps channels active.",
+    descriptionShort: "Calendars and posting that stay active.",
+  },
+  {
+    number: "CH.04",
+    title: "Email Marketing",
+    description: "Campaigns and automations that turn subscribers into customers, not unsubscribes.",
+    descriptionShort: "Campaigns that turn subscribers into customers.",
+  },
+  {
+    number: "CH.05",
+    title: "Brand & Visual Identity",
+    description: "Logo, type, color, and guidelines that make your brand recognizable everywhere.",
+    descriptionShort: "Logo and color systems that make you recognizable.",
+  },
+  {
+    number: "CH.06",
+    title: "SEO & Content Strategy",
+    description: "Research-backed content and technical SEO that gets you found, not just published.",
+    descriptionShort: "Content and technical SEO that gets you found.",
+  },
+];
+
+export const process = [
+  {
+    number: "01",
+    title: "Discovery",
+    description: "We learn your brand, audience, and goals before touching a single tool.",
+    descriptionShort: "We learn your brand and goals first.",
+  },
+  {
+    number: "02",
+    title: "Design & Plan",
+    description: "Wireframes and a roadmap you approve before production starts.",
+    descriptionShort: "A roadmap you approve before we build.",
+  },
+  {
+    number: "03",
+    title: "Build & Produce",
+    description: "Code gets written, footage gets cut, campaigns get built — in reviewable rounds.",
+    descriptionShort: "Built in short, reviewable rounds.",
+  },
+  {
+    number: "04",
+    title: "Launch & Broadcast",
+    description: "We ship it, monitor it, and hand you a channel that's ready to run.",
+    descriptionShort: "Shipped, monitored, ready to run.",
+  },
+];
