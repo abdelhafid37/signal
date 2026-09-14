@@ -5,6 +5,7 @@ import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Heading from "@/components/ui/Heading";
 import { button } from "@/components/ui/Button";
+import ServiceCard from "@/components/ui/ServiceCard";
 
 export default function ServicesPreview() {
   return (
@@ -23,11 +24,12 @@ export default function ServicesPreview() {
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <div key={service.number} className="p-8 border border-border bg-surface">
-              <p className="mb-3 font-mono text-xs text-accent">{service.number}</p>
-              <h3 className="mb-2 text-lg font-bold font-display">{service.title}</h3>
-              <p className="text-sm font-body text-ink-soft">{service.description}</p>
-            </div>
+            <ServiceCard
+              key={service.number}
+              number={service.number}
+              title={service.title}
+              description={service.description}
+            />
           ))}
         </div>
 
