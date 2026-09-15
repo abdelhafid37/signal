@@ -46,6 +46,8 @@ export const featuredWork = [
     tags: ["WEB", "BRAND"],
     description: "Full rebrand and e-commerce site for a specialty coffee roaster.",
     descriptionShort: "Rebrand and e-commerce site for a coffee roaster.",
+    workDescription: "Full rebrand and e-commerce site for a specialty coffee roaster.",
+    workDescriptionShort: "Rebrand and e-commerce site for a coffee roaster.",
   },
   {
     initials: "KA",
@@ -53,12 +55,37 @@ export const featuredWork = [
     tags: ["SOCIAL", "VIDEO"],
     description: "A 12-month content engine — reels and edits that actually shipped weekly.",
     descriptionShort: "A 12-month content engine, shipped weekly.",
+    workDescription: "A 12-month content engine: reels and edits that shipped weekly.",
+    workDescriptionShort: "A 12-month content engine, shipped weekly.",
   },
   {
     initials: "VW",
     title: "Verde Wellness",
     tags: ["EMAIL", "WEB"],
     description: "Lifecycle email flows plus a new site that finally matched the brand.",
+    workDescription: "Lifecycle email flows plus a new site that matched the brand.",
+    workDescriptionShort: "Lifecycle email flows plus a matching new site.",
+  },
+  {
+    initials: "MF",
+    title: "Marlowe & Finch",
+    tags: ["WEB", "SEO"],
+    workDescription: "Site rebuild focused on organic search — 3x traffic in 6 months.",
+    workDescriptionShort: "3x organic traffic in 6 months.",
+  },
+  {
+    initials: "RF",
+    title: "Rally Fitness Co.",
+    tags: ["VIDEO", "SOCIAL"],
+    workDescription: "Studio-style video content repurposed across every channel.",
+    workDescriptionShort: "Studio-style video, repurposed everywhere.",
+  },
+  {
+    initials: "PS",
+    title: "Petrichor Skincare",
+    tags: ["BRAND", "EMAIL"],
+    workDescription: "New visual identity and the email system to launch it.",
+    workDescriptionShort: "New identity plus the email system to launch it.",
   },
 ];
 
