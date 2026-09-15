@@ -17,10 +17,10 @@ export default function CTABanner({ eyebrow, heading, headingShort }: CTABannerP
         <Eyebrow isDark className="justify-center">
           {eyebrow}
         </Eyebrow>
-        <Heading as="h2" size="m" className="mb-6 md:mb-7 xl:mb-8 xl:hidden">
+        <Heading as="h2" size="m" className="mb-6 md:mb-7 xl:hidden">
           {headingShort ?? heading}
         </Heading>
-        <Heading as="h2" size="m" className="hidden mb-6 md:mb-7 xl:mb-8 xl:block">
+        <Heading as="h2" size="m" className="hidden xl:mb-8 xl:block">
           {heading}
         </Heading>
         <Link href="/contact" className={button({ variant: "primary" })}>
