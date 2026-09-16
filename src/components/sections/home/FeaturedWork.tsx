@@ -1,12 +1,11 @@
+import { cn } from "@/lib/cn";
+import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Heading from "@/components/ui/Heading";
-import { featuredWork } from "@/lib/data";
-import Link from "next/link";
-import React from "react";
-import WorkCard from "./WorkCard";
-import { cn } from "@/lib/cn";
+import WorkCard from "@/components/ui/WorkCard";
 import { button } from "@/components/ui/Button";
+import { featuredWork } from "@/lib/data";
 
 export default function FeaturedWork() {
   return (
@@ -26,13 +25,25 @@ export default function FeaturedWork() {
 
         <div className="grid gap-6 md:grid-cols-2 xl:hidden">
           {featuredWork.slice(0, 2).map((project) => (
-            <WorkCard key={project.title} {...project} description={project.descriptionShort ?? project.description} />
+            <WorkCard
+              key={project.title}
+              initials={project.initials}
+              title={project.title}
+              tags={project.tags}
+              description={project.descriptionShort ?? project.description ?? project.workDescription}
+            />
           ))}
         </div>
 
         <div className="hidden gap-6 xl:grid xl:grid-cols-3">
-          {featuredWork.map((project) => (
-            <WorkCard key={project.title} {...project} />
+          {featuredWork.slice(0, 3).map((project) => (
+            <WorkCard
+              key={project.title}
+              initials={project.initials}
+              title={project.title}
+              tags={project.tags}
+              description={project.description ?? project.workDescription}
+            />
           ))}
         </div>
 
