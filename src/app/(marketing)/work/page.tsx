@@ -1,8 +1,8 @@
-import WorkCard from "@/components/sections/home/WorkCard";
 import Container from "@/components/ui/Container";
 import CTABanner from "@/components/ui/CTABanner";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Heading from "@/components/ui/Heading";
+import WorkCard from "@/components/ui/WorkCard";
 import { featuredWork } from "@/lib/data";
 
 export default function WorkPage() {
