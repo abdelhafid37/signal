@@ -173,3 +173,30 @@ export const process = [
     descriptionShort: "Shipped, monitored, ready to run.",
   },
 ];
+
+export const team = [
+  { initials: "YK", name: "Yasmine K.", role: "Founder & Creative Director" },
+  { initials: "AR", name: "Adam R.", role: "Lead Developer" },
+  { initials: "LB", name: "Lina B.", role: "Video & Motion Lead" },
+  { initials: "ST", name: "Sam T.", role: "Social & Content Strategist" },
+];
+
+export const values = [
+  {
+    title: "Consistency Over Chaos",
+    description:
+      "Your brand should look and sound the same on your site, your feed, and your inbox. We build it that way from day one.",
+    descriptionShort: "Site, feed, and inbox — one brand voice, built by one team.",
+  },
+  {
+    title: "Craft in Every Channel",
+    description:
+      "We don't treat video as an afterthought to web. Every channel gets senior-level attention, every time.",
+    descriptionShort: "Every channel gets senior-level attention, every time.",
+  },
+  {
+    title: "Small Team, Direct Access",
+    description: "You work directly with the people doing the work — no account managers relaying messages.",
+    descriptionShort: "You work with the people doing the work. No middlemen.",
+  },
+];
