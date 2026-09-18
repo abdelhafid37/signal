@@ -56,7 +56,11 @@ export default function NavBar() {
               <ul className="flex flex-col items-center justify-center gap-y-8">
                 {navLinks.map((link, index) => (
                   <li key={`mobile-${link.href}`}>
-                    <Link href={link.href} className="font-mono text-base tracking-wide uppercase">
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="font-mono text-base tracking-wide uppercase"
+                    >
                       <span className="text-accent">{String(index + 1).padStart(2, "0")}</span> {link.label}
                     </Link>
                   </li>
@@ -64,7 +68,7 @@ export default function NavBar() {
               </ul>
             </nav>
 
-            <Link href="/contact" className={button({ size: "md" })}>
+            <Link href="/contact" onClick={() => setIsOpen(false)} className={button({ size: "md" })}>
               Start a Project
             </Link>
           </Container>
