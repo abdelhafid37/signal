@@ -12,7 +12,9 @@ export default function Footer() {
         <div className="flex flex-col justify-between gap-9 md:gap-0 md:flex-row">
           <div>
             <p className="mb-3 font-bold font-display">SIGNAL</p>
-            <p className="font-body text-sm text-ink-soft max-w-[240px]">Full-channel creative studio.</p>
+            <p className="font-body text-sm text-ink-soft max-w-[240px] hidden md:block">
+              Full-channel creative studio.
+            </p>
           </div>
           {/* flex gap-16 */}
           <div className="flex gap-9 md:gap-12 xl:gap-20">
@@ -34,17 +36,24 @@ export default function Footer() {
                 <a href="mailto:hello@signalstudio.co" className="text-sm font-body">
                   hello@signalstudio.co
                 </a>
-                <p className="text-sm font-body">Remote-first · Worldwide</p>
+                <p className="text-sm font-body">
+                  <span className="xl:hidden">Remote-first</span>
+                  <span className="hidden xl:inline">Remote-first · Worldwide</span>
+                </p>
               </div>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col pt-6 border-t gap-y-4 md:flex-row md:items-center md:justify-between border-white/10 mt-14">
-          <p className="font-mono text-xs text-ink-soft">&copy; {currentYear} Signal Studio. All rights reserved.</p>
+          <p className="font-mono text-xs text-ink-soft">
+            <span className="xl:hidden">&copy; {currentYear} Signal Studio.</span>
+            <span className="hidden xl:inline">&copy; {currentYear} Signal Studio. All rights reserved.</span>
+          </p>
           <p className="flex items-center font-mono text-xs gap-x-2">
             <Dot className="bg-tally animate-pulse" />
-            Available for projects
+            <span className="md:hidden">Available</span>
+            <span className="hidden md:inline">Available for projects</span>
           </p>
         </div>
       </Container>
