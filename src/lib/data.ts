@@ -200,3 +200,9 @@ export const values = [
     descriptionShort: "You work with the people doing the work. No middlemen.",
   },
 ];
+
+export const contactInfo = [
+  { label: "Email", value: "hello@signalstudio.co" },
+  { label: "Location", value: "Remote-first · Worldwide" },
+  { label: "Response Time", value: "We reply within 1 business day." },
+];
