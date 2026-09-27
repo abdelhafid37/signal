@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Heading from "@/components/ui/Heading";
@@ -74,6 +75,8 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+
+      <Footer />
     </>
   );
 }

@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
 import CTABanner from "@/components/ui/CTABanner";
 import Eyebrow from "@/components/ui/Eyebrow";
@@ -50,6 +51,8 @@ export default function WorkPage() {
         heading="Want to see your brand here next?"
         headingShort="Want to see your brand here?"
       />
+
+      <Footer />
     </>
   );
 }

@@ -3,7 +3,11 @@ import Container from "../ui/Container";
 import { navLinks } from "@/lib/data";
 import Dot from "../ui/Dot";
 
-export default function Footer() {
+interface FooterProps {
+  variant?: "home" | "inner" | "contact";
+}
+
+export default function Footer({ variant = "inner" }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -16,9 +20,9 @@ export default function Footer() {
               Full-channel creative studio.
             </p>
           </div>
-          {/* flex gap-16 */}
+
           <div className="flex gap-9 md:gap-12 xl:gap-20">
-            <div>
+            <div className={variant === "contact" ? "hidden xl:block" : ""}>
               <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">Sitemap</p>
 
               <ul className="flex flex-col gap-y-2.5">
@@ -30,18 +34,35 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div>
-              <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">Contact</p>
-              <div className="flex flex-col gap-y-2.5">
-                <a href="mailto:hello@signalstudio.co" className="text-sm font-body">
-                  hello@signalstudio.co
-                </a>
-                <p className="text-sm font-body">
-                  <span className="xl:hidden">Remote-first</span>
-                  <span className="hidden xl:inline">Remote-first · Worldwide</span>
-                </p>
+            {variant === "contact" ? (
+              <div>
+                <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">Social</p>
+                <div className="flex flex-col gap-y-2.5">
+                  <a href="#" className="text-sm font-body">
+                    Instagram
+                  </a>
+                  <a href="#" className="text-sm font-body">
+                    LinkedIn
+                  </a>
+                  <a href="#" className="text-sm font-body">
+                    X
+                  </a>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className={variant === "inner" ? "hidden xl:block" : ""}>
+                <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">Contact</p>
+                <div className="flex flex-col gap-y-2.5">
+                  <a href="mailto:hello@signalstudio.co" className="text-sm font-body">
+                    hello@signalstudio.co
+                  </a>
+                  <p className="text-sm font-body">
+                    <span className="xl:hidden">Remote-first</span>
+                    <span className="hidden xl:inline">Remote-first · Worldwide</span>
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 

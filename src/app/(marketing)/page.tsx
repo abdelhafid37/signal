@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import AboutTeaser from "@/components/sections/home/AboutTeaser";
 import FeaturedWork from "@/components/sections/home/FeaturedWork";
 import HeroSection from "@/components/sections/home/HeroSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <FeaturedWork />
       <Testimonials />
       <CTABanner eyebrow="Let's talk" heading="Ready to be seen everywhere?" />
+      <Footer variant="home" />
     </>
   );
 }

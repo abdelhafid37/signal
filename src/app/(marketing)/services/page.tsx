@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
 import CTABanner from "@/components/ui/CTABanner";
 import Eyebrow from "@/components/ui/Eyebrow";
@@ -60,6 +61,8 @@ export default function ServicesPage() {
         heading="Not sure which channel you need first?"
         headingShort="Not sure what you need first?"
       />
+
+      <Footer />
     </>
   );
 }
