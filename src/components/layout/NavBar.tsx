@@ -6,9 +6,12 @@ import { button } from "../ui/Button";
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 import { navLinks } from "@/lib/data";
+import { usePathname } from "next/navigation";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-bg">
@@ -19,13 +22,20 @@ export default function NavBar() {
 
         <nav aria-label="Primary">
           <ul className="items-center justify-center hidden gap-x-8 lg:flex">
-            {navLinks.map((link, index) => (
-              <li key={link.href}>
-                <Link href={link.href} className="uppercase font-mono tracking-wide text-[13px]">
-                  <span className="text-accent">{String(index + 1).padStart(2, "0")}</span> {link.label}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map((link, index) => {
+              const isActive = pathname === link.href;
+
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={cn("uppercase font-mono tracking-wide text-[13px]", isActive && "text-accent")}
+                  >
+                    <span className="text-accent">{String(index + 1).padStart(2, "0")}</span> {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
@@ -50,21 +60,25 @@ export default function NavBar() {
       </Container>
 
       {isOpen && (
-        <div className="border-t lg:hidden border-border">
+        <div className="absolute left-0 w-full border-t lg:hidden border-border top-full bg-bg">
           <Container className="flex flex-col py-6 gap-y-8">
             <nav aria-label="Mobile">
               <ul className="flex flex-col items-center justify-center gap-y-8">
-                {navLinks.map((link, index) => (
-                  <li key={`mobile-${link.href}`}>
-                    <Link
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className="font-mono text-base tracking-wide uppercase"
-                    >
-                      <span className="text-accent">{String(index + 1).padStart(2, "0")}</span> {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {navLinks.map((link, index) => {
+                  const isActive = pathname === link.href;
+
+                  return (
+                    <li key={`mobile-${link.href}`}>
+                      <Link
+                        href={link.href}
+                        onClick={() => setIsOpen(false)}
+                        className={cn("font-mono text-base tracking-wide uppercase", isActive && "text-accent")}
+                      >
+                        <span className="text-accent">{String(index + 1).padStart(2, "0")}</span> {link.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </nav>
 
