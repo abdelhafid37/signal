@@ -6,7 +6,7 @@ import ServicesPreview from "@/components/sections/home/ServicesPreview";
 import Testimonials from "@/components/sections/home/Testimonials";
 import CTABanner from "@/components/ui/CTABanner";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <HeroSection />
