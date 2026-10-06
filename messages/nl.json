@@ -1,1 +1,14 @@
-{}
+{
+  "NavBar": {
+    "startProject": "Een project starten",
+    "menu": "Menu",
+    "close": "Sluiten"
+  },
+  "Nav": {
+    "home": "Home",
+    "work": "Werk",
+    "services": "Diensten",
+    "about": "Over ons",
+    "contact": "Contact"
+  }
+}

@@ -1,9 +1,9 @@
 export const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Work", href: "/work" },
-  { label: "Services", href: "/services" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { key: "home", href: "/" },
+  { key: "work", href: "/work" },
+  { key: "services", href: "/services" },
+  { key: "about", href: "/about" },
+  { key: "contact", href: "/contact" },
 ];
 
 export const services = [
@@ -93,14 +93,16 @@ export const testimonials = [
   {
     quote:
       "They handled our site, our reels, and our email flows without ever feeling like three different vendors. That consistency was the whole point.",
-    quoteTablet: "They handled our site, our reels, and our email flows without ever feeling like three vendors.",
+    quoteTablet:
+      "They handled our site, our reels, and our email flows without ever feeling like three vendors.",
     quoteMobile: "They handled our site, reels, and email without feeling like three vendors.",
     name: "MARCUS D.",
     role: "FOUNDER",
     company: "PLACEHOLDER CO.",
   },
   {
-    quote: "Our open rates doubled once Signal took over email. They write like a person, not a marketing template.",
+    quote:
+      "Our open rates doubled once Signal took over email. They write like a person, not a marketing template.",
     quoteTablet: "Our open rates doubled once Signal took over email.",
     name: "PRIYA N.",
     role: "HEAD OF GROWTH",
@@ -112,13 +114,15 @@ export const servicesFull = [
   {
     number: "CH.01",
     title: "Web Development",
-    description: "Fast, modern websites built to convert — from marketing pages to full product builds.",
+    description:
+      "Fast, modern websites built to convert — from marketing pages to full product builds.",
     descriptionShort: "Fast, modern websites built to convert.",
   },
   {
     number: "CH.02",
     title: "Video Editing",
-    description: "Raw footage into finished cuts — social edits, brand films, ads, and everything between.",
+    description:
+      "Raw footage into finished cuts — social edits, brand films, ads, and everything between.",
     descriptionShort: "Raw footage into finished, publish-ready cuts.",
   },
   {
@@ -130,7 +134,8 @@ export const servicesFull = [
   {
     number: "CH.04",
     title: "Email Marketing",
-    description: "Campaigns and automations that turn subscribers into customers, not unsubscribes.",
+    description:
+      "Campaigns and automations that turn subscribers into customers, not unsubscribes.",
     descriptionShort: "Campaigns that turn subscribers into customers.",
   },
   {
@@ -142,7 +147,8 @@ export const servicesFull = [
   {
     number: "CH.06",
     title: "SEO & Content Strategy",
-    description: "Research-backed content and technical SEO that gets you found, not just published.",
+    description:
+      "Research-backed content and technical SEO that gets you found, not just published.",
     descriptionShort: "Content and technical SEO that gets you found.",
   },
 ];
@@ -196,7 +202,8 @@ export const values = [
   },
   {
     title: "Small Team, Direct Access",
-    description: "You work directly with the people doing the work — no account managers relaying messages.",
+    description:
+      "You work directly with the people doing the work — no account managers relaying messages.",
     descriptionShort: "You work with the people doing the work. No middlemen.",
   },
 ];

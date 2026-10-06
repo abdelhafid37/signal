@@ -7,11 +7,15 @@ import Link from "next/link";
 import { cn } from "@/lib/cn";
 import { navLinks } from "@/lib/data";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const pathname = usePathname();
+
+  const t = useTranslations("NavBar");
+  const tNav = useTranslations("Nav");
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-bg">
@@ -29,9 +33,13 @@ export default function NavBar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={cn("uppercase font-mono tracking-wide text-[13px]", isActive && "text-accent")}
+                    className={cn(
+                      "uppercase font-mono tracking-wide text-[13px]",
+                      isActive && "text-accent",
+                    )}
                   >
-                    <span className="text-accent">{String(index + 1).padStart(2, "0")}</span> {link.label}
+                    <span className="text-accent">{String(index + 1).padStart(2, "0")}</span>{" "}
+                    {tNav(link.key)}
                   </Link>
                 </li>
               );
@@ -40,7 +48,7 @@ export default function NavBar() {
         </nav>
 
         <Link href="/contact" className={cn(button({ size: "sm" }), "hidden lg:inline-flex")}>
-          Start a Project
+          {t("startProject")}
         </Link>
 
         <button
@@ -55,7 +63,9 @@ export default function NavBar() {
             <span className="h-0.5 bg-ink block" />
             <span className="h-0.5 bg-ink block" />
           </span>
-          <span className="font-mono text-[11px] uppercase tracking-wide">{isOpen ? "Close" : "Menu"}</span>
+          <span className="font-mono text-[11px] uppercase tracking-wide">
+            {isOpen ? t("close") : t("menu")}
+          </span>
         </button>
       </Container>
 
@@ -72,9 +82,13 @@ export default function NavBar() {
                       <Link
                         href={link.href}
                         onClick={() => setIsOpen(false)}
-                        className={cn("font-mono text-base tracking-wide uppercase", isActive && "text-accent")}
+                        className={cn(
+                          "font-mono text-base tracking-wide uppercase",
+                          isActive && "text-accent",
+                        )}
                       >
-                        <span className="text-accent">{String(index + 1).padStart(2, "0")}</span> {link.label}
+                        <span className="text-accent">{String(index + 1).padStart(2, "0")}</span>{" "}
+                        {tNav(link.key)}
                       </Link>
                     </li>
                   );
@@ -82,8 +96,12 @@ export default function NavBar() {
               </ul>
             </nav>
 
-            <Link href="/contact" onClick={() => setIsOpen(false)} className={button({ size: "md" })}>
-              Start a Project
+            <Link
+              href="/contact"
+              onClick={() => setIsOpen(false)}
+              className={button({ size: "md" })}
+            >
+              {t("startProject")}
             </Link>
           </Container>
         </div>

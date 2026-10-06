@@ -2,6 +2,7 @@ import Link from "next/link";
 import Container from "../ui/Container";
 import { navLinks } from "@/lib/data";
 import Dot from "../ui/Dot";
+import { useTranslations } from "next-intl";
 
 interface FooterProps {
   variant?: "home" | "inner" | "contact";
@@ -9,6 +10,8 @@ interface FooterProps {
 
 export default function Footer({ variant = "inner" }: FooterProps) {
   const currentYear = new Date().getFullYear();
+
+  const tNav = useTranslations("Nav");
 
   return (
     <footer className="bg-ink text-bg">
@@ -23,12 +26,14 @@ export default function Footer({ variant = "inner" }: FooterProps) {
 
           <div className="flex gap-9 md:gap-12 xl:gap-20">
             <div className={variant === "contact" ? "hidden xl:block" : ""}>
-              <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">Sitemap</p>
+              <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">
+                Sitemap
+              </p>
 
               <ul className="flex flex-col gap-y-2.5">
                 {navLinks.map((link) => (
                   <li key={link.href} className="text-sm font-body">
-                    <Link href={link.href}>{link.label}</Link>
+                    <Link href={link.href}>{tNav(link.key)}</Link>
                   </li>
                 ))}
               </ul>
@@ -36,7 +41,9 @@ export default function Footer({ variant = "inner" }: FooterProps) {
 
             {variant === "contact" ? (
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">Social</p>
+                <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">
+                  Social
+                </p>
                 <div className="flex flex-col gap-y-2.5">
                   <a href="#" className="text-sm font-body">
                     Instagram
@@ -51,7 +58,9 @@ export default function Footer({ variant = "inner" }: FooterProps) {
               </div>
             ) : (
               <div className={variant === "inner" ? "hidden xl:block" : ""}>
-                <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">Contact</p>
+                <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">
+                  Contact
+                </p>
                 <div className="flex flex-col gap-y-2.5">
                   <a href="mailto:hello@signalstudio.co" className="text-sm font-body">
                     hello@signalstudio.co
@@ -69,7 +78,9 @@ export default function Footer({ variant = "inner" }: FooterProps) {
         <div className="flex flex-col pt-6 border-t gap-y-4 md:flex-row md:items-center md:justify-between border-white/10 mt-14">
           <p className="font-mono text-xs text-ink-soft">
             <span className="xl:hidden">&copy; {currentYear} Signal Studio.</span>
-            <span className="hidden xl:inline">&copy; {currentYear} Signal Studio. All rights reserved.</span>
+            <span className="hidden xl:inline">
+              &copy; {currentYear} Signal Studio. All rights reserved.
+            </span>
           </p>
           <p className="flex items-center font-mono text-xs gap-x-2">
             <Dot className="bg-tally animate-pulse" />
