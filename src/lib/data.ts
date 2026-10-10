@@ -213,3 +213,9 @@ export const contactInfo = [
   { label: "Location", value: "Remote-first · Worldwide" },
   { label: "Response Time", value: "We reply within 1 business day." },
 ];
+
+export const socialLinks = [
+  { label: "Instagram", href: "#" },
+  { label: "LinkedIn", href: "#" },
+  { label: "X", href: "#" },
+];

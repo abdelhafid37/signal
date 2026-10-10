@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Container from "../ui/Container";
-import { navLinks } from "@/lib/data";
+import { navLinks, socialLinks } from "@/lib/data";
 import Dot from "../ui/Dot";
 import { useTranslations } from "next-intl";
 
@@ -46,15 +46,11 @@ export default function Footer({ variant = "inner" }: FooterProps) {
                   {t("social")}
                 </p>
                 <div className="flex flex-col gap-y-2.5">
-                  <a href="#" className="text-sm font-body">
-                    Instagram
-                  </a>
-                  <a href="#" className="text-sm font-body">
-                    LinkedIn
-                  </a>
-                  <a href="#" className="text-sm font-body">
-                    X
-                  </a>
+                  {socialLinks.map((social) => (
+                    <a key={social.label} href={social.href} className="text-sm font-body">
+                      {social.label}
+                    </a>
+                  ))}
                 </div>
               </div>
             ) : (
