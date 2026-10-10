@@ -10,5 +10,17 @@
     "services": "Diensten",
     "about": "Over ons",
     "contact": "Contact"
+  },
+  "Footer": {
+    "tagline": "Creatieve studio voor volledige communicatie.",
+    "sitemap": "Sitemap",
+    "contact": "Contact",
+    "social": "Social",
+    "remoteFirst": "Remote-first",
+    "remoteFirstFull": "Remote-first · Wereldwijd",
+    "copyright": "{year} Signal Studio.",
+    "copyrightFull": "{year} Signal Studio. Alle rechten voorbehouden.",
+    "available": "Beschikbaar",
+    "availableFull": "Beschikbaar voor projecten"
   }
 }

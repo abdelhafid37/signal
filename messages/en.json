@@ -10,5 +10,17 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact"
+  },
+  "Footer": {
+    "tagline": "Full-channel creative studio.",
+    "sitemap": "Sitemap",
+    "contact": "Contact",
+    "social": "Social",
+    "remoteFirst": "Remote-first",
+    "remoteFirstFull": "Remote-first · Worldwide",
+    "copyright": "{year} Signal Studio.",
+    "copyrightFull": "{year} Signal Studio. All rights reserved.",
+    "available": "Available",
+    "availableFull": "Available for projects"
   }
 }

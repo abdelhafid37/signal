@@ -10,5 +10,17 @@
     "services": "Servicios",
     "about": "Sobre nosotros",
     "contact": "Contacto"
+  },
+  "Footer": {
+    "tagline": "Estudio creativo integral.",
+    "sitemap": "Mapa del sitio",
+    "contact": "Contacto",
+    "social": "Redes sociales",
+    "remoteFirst": "Remote-first",
+    "remoteFirstFull": "Remote-first · En todo el mundo",
+    "copyright": "{year} Signal Studio.",
+    "copyrightFull": "{year} Signal Studio. Todos los derechos reservados.",
+    "available": "Disponible",
+    "availableFull": "Disponible para proyectos"
   }
 }

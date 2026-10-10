@@ -12,6 +12,7 @@ export default function Footer({ variant = "inner" }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const tNav = useTranslations("Nav");
+  const t = useTranslations("Footer");
 
   return (
     <footer className="bg-ink text-bg">
@@ -20,14 +21,14 @@ export default function Footer({ variant = "inner" }: FooterProps) {
           <div>
             <p className="mb-3 font-bold font-display">SIGNAL</p>
             <p className="font-body text-sm text-ink-soft max-w-[240px] hidden md:block">
-              Full-channel creative studio.
+              {t("tagline")}
             </p>
           </div>
 
           <div className="flex gap-9 md:gap-12 xl:gap-20">
             <div className={variant === "contact" ? "hidden xl:block" : ""}>
               <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">
-                Sitemap
+                {t("sitemap")}
               </p>
 
               <ul className="flex flex-col gap-y-2.5">
@@ -42,7 +43,7 @@ export default function Footer({ variant = "inner" }: FooterProps) {
             {variant === "contact" ? (
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">
-                  Social
+                  {t("social")}
                 </p>
                 <div className="flex flex-col gap-y-2.5">
                   <a href="#" className="text-sm font-body">
@@ -59,15 +60,15 @@ export default function Footer({ variant = "inner" }: FooterProps) {
             ) : (
               <div className={variant === "inner" ? "hidden xl:block" : ""}>
                 <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">
-                  Contact
+                  {t("contact")}
                 </p>
                 <div className="flex flex-col gap-y-2.5">
                   <a href="mailto:hello@signalstudio.co" className="text-sm font-body">
                     hello@signalstudio.co
                   </a>
                   <p className="text-sm font-body">
-                    <span className="xl:hidden">Remote-first</span>
-                    <span className="hidden xl:inline">Remote-first · Worldwide</span>
+                    <span className="xl:hidden">{t("remoteFirst")}</span>
+                    <span className="hidden xl:inline">{t("remoteFirstFull")}</span>
                   </p>
                 </div>
               </div>
@@ -77,15 +78,15 @@ export default function Footer({ variant = "inner" }: FooterProps) {
 
         <div className="flex flex-col pt-6 border-t gap-y-4 md:flex-row md:items-center md:justify-between border-white/10 mt-14">
           <p className="font-mono text-xs text-ink-soft">
-            <span className="xl:hidden">&copy; {currentYear} Signal Studio.</span>
+            <span className="xl:hidden">&copy; {t("copyright", { year: currentYear })}</span>
             <span className="hidden xl:inline">
-              &copy; {currentYear} Signal Studio. All rights reserved.
+              &copy; {t("copyrightFull", { year: currentYear })}
             </span>
           </p>
           <p className="flex items-center font-mono text-xs gap-x-2">
             <Dot className="bg-tally animate-pulse" />
-            <span className="md:hidden">Available</span>
-            <span className="hidden md:inline">Available for projects</span>
+            <span className="md:hidden">{t("available")}</span>
+            <span className="hidden md:inline">{t("availableFull")}</span>
           </p>
         </div>
       </Container>

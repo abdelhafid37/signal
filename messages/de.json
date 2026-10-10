@@ -10,5 +10,17 @@
     "services": "Leistungen",
     "about": "Über uns",
     "contact": "Kontakt"
+  },
+  "Footer": {
+    "tagline": "Kreativstudio für ganzheitliche Kommunikation.",
+    "sitemap": "Sitemap",
+    "contact": "Kontakt",
+    "social": "Social Media",
+    "remoteFirst": "Remote-first",
+    "remoteFirstFull": "Remote-first · Weltweit",
+    "copyright": "{year} Signal Studio.",
+    "copyrightFull": "{year} Signal Studio. Alle Rechte vorbehalten.",
+    "available": "Verfügbar",
+    "availableFull": "Für Projekte verfügbar"
   }
 }
