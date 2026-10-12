@@ -3,11 +3,10 @@
 import { useState } from "react";
 import Container from "../ui/Container";
 import { button } from "../ui/Button";
-import Link from "next/link";
 import { cn } from "@/lib/cn";
 import { navLinks } from "@/lib/data";
-import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);

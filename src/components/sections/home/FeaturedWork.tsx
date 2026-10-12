@@ -1,11 +1,11 @@
 import { cn } from "@/lib/cn";
-import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Heading from "@/components/ui/Heading";
 import WorkCard from "@/components/ui/WorkCard";
 import { button } from "@/components/ui/Button";
 import { featuredWork } from "@/lib/data";
+import { Link } from "@/i18n/navigation";
 
 export default function FeaturedWork() {
   return (
@@ -30,7 +30,9 @@ export default function FeaturedWork() {
               initials={project.initials}
               title={project.title}
               tags={project.tags}
-              description={project.descriptionShort ?? project.description ?? project.workDescription}
+              description={
+                project.descriptionShort ?? project.description ?? project.workDescription
+              }
             />
           ))}
         </div>
@@ -47,7 +49,10 @@ export default function FeaturedWork() {
           ))}
         </div>
 
-        <Link href="/work" className={cn(button({ variant: "ghost" }), "self-start mt-7 md:mt-[18px] xl:hidden")}>
+        <Link
+          href="/work"
+          className={cn(button({ variant: "ghost" }), "self-start mt-7 md:mt-[18px] xl:hidden")}
+        >
           View All Work →
         </Link>
       </Container>

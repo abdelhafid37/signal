@@ -2,7 +2,7 @@ import { button } from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Heading from "@/components/ui/Heading";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 interface CTABannerProps {
   eyebrow: string;

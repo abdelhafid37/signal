@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { cn } from "@/lib/cn";
 import { services } from "@/lib/data";
 import Container from "@/components/ui/Container";
@@ -6,6 +5,7 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import Heading from "@/components/ui/Heading";
 import { button } from "@/components/ui/Button";
 import ServiceCard from "@/components/ui/ServiceCard";
+import { Link } from "@/i18n/navigation";
 
 export default function ServicesPreview() {
   return (
@@ -18,7 +18,10 @@ export default function ServicesPreview() {
               Six channels. One team.
             </Heading>
           </div>
-          <Link href="/services" className={cn(button({ variant: "ghost" }), "hidden lg:inline-flex")}>
+          <Link
+            href="/services"
+            className={cn(button({ variant: "ghost" }), "hidden lg:inline-flex")}
+          >
             View Services →
           </Link>
         </div>
@@ -33,7 +36,10 @@ export default function ServicesPreview() {
           ))}
         </div>
 
-        <Link href="/services" className={cn(button({ variant: "ghost" }), "mt-7 md:mt-8 lg:hidden")}>
+        <Link
+          href="/services"
+          className={cn(button({ variant: "ghost" }), "mt-7 md:mt-8 lg:hidden")}
+        >
           View Services →
         </Link>
       </Container>

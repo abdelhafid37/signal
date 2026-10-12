@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { cn } from "@/lib/cn";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Heading from "@/components/ui/Heading";
 import { button } from "@/components/ui/Button";
 import Dot from "@/components/ui/Dot";
+import { Link } from "@/i18n/navigation";
 
 const channels = {
   full: ["CH.01 WEB", "CH.02 VIDEO", "CH.03 SOCIAL", "CH.04 EMAIL"],
@@ -18,37 +18,27 @@ export default function HeroSection() {
         <div className="flex flex-col gap-12 xl:grid xl:grid-cols-2 xl:gap-16 xl:items-center">
           <div>
             <Eyebrow>Full-channel creative studio</Eyebrow>
-            <Heading
-              as="h1"
-              size="xl"
-              className="max-w-3xl mb-6 xl:text-display-l"
-            >
+            <Heading as="h1" size="xl" className="max-w-3xl mb-6 xl:text-display-l">
               We build the site. <br className="hidden lg:block" />
               Cut the footage. <br className="hidden lg:block" />
               Run the feed. <br className="hidden lg:block" />
               Land the inbox.
             </Heading>
             <p className="max-w-xl font-body text-body-lg text-ink-soft mb-9">
-              Signal is a small studio that handles web development, video
-              editing, social management, and email marketing under one roof —
-              so your brand looks and sounds the same everywhere it shows up.
+              Signal is a small studio that handles web development, video editing, social
+              management, and email marketing under one roof — so your brand looks and sounds the
+              same everywhere it shows up.
             </p>
             <div className="flex flex-col gap-4 md:flex-row">
               <Link
                 href="/work"
-                className={cn(
-                  button({ variant: "primary" }),
-                  "w-full justify-center md:w-auto",
-                )}
+                className={cn(button({ variant: "primary" }), "w-full justify-center md:w-auto")}
               >
                 See the Work
               </Link>
               <Link
                 href="/contact"
-                className={cn(
-                  button({ variant: "secondary" }),
-                  "w-full justify-center md:w-auto",
-                )}
+                className={cn(button({ variant: "secondary" }), "w-full justify-center md:w-auto")}
               >
                 Start a Project
               </Link>

@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Container from "../ui/Container";
 import { navLinks, socialLinks } from "@/lib/data";
 import Dot from "../ui/Dot";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 interface FooterProps {
   variant?: "home" | "inner" | "contact";

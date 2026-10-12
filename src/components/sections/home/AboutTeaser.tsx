@@ -2,8 +2,8 @@ import { button } from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Heading from "@/components/ui/Heading";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
-import Link from "next/link";
 
 const stats = [
   { number: "2021", label: "Founded" },
@@ -24,7 +24,10 @@ export default function AboutTeaser() {
             <Heading as="h2" size="m" className="mb-6 xl:hidden">
               One small team, direct access.
             </Heading>
-            <Link href="/about" className={cn(button({ variant: "ghost" }), "hidden xl:inline-flex")}>
+            <Link
+              href="/about"
+              className={cn(button({ variant: "ghost" }), "hidden xl:inline-flex")}
+            >
               More About Us →
             </Link>
           </div>
@@ -32,7 +35,9 @@ export default function AboutTeaser() {
           <div className="flex flex-wrap justify-between mb-6 gap-y-6 xl:mb-0 md:flex-nowrap md:justify-normal md:gap-12 xl:gap-16">
             {stats.map((stat) => (
               <div key={stat.label} className="w-[48%] md:w-auto">
-                <p className="text-3xl font-bold font-display text-accent md:text-4xl">{stat.number}</p>
+                <p className="text-3xl font-bold font-display text-accent md:text-4xl">
+                  {stat.number}
+                </p>
                 <span className="font-mono text-[11px] uppercase tracking-wide text-ink-soft mt-1.5 block">
                   {stat.label}
                 </span>
