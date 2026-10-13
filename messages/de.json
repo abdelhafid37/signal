@@ -2,7 +2,11 @@
   "NavBar": {
     "startProject": "Projekt starten",
     "menu": "Menü",
-    "close": "Schließen"
+    "close": "Schließen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "primaryNavigation": "Primär",
+    "mobileNavigation": "Mobil"
   },
   "Nav": {
     "home": "Startseite",

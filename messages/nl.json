@@ -2,7 +2,11 @@
   "NavBar": {
     "startProject": "Een project starten",
     "menu": "Menu",
-    "close": "Sluiten"
+    "close": "Sluiten",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "primaryNavigation": "Primair",
+    "mobileNavigation": "Mobiel"
   },
   "Nav": {
     "home": "Home",

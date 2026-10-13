@@ -23,7 +23,7 @@ export default function NavBar() {
           SIGNAL
         </Link>
 
-        <nav aria-label="Primary">
+        <nav aria-label={t("primaryNavigation")}>
           <ul className="items-center justify-center hidden gap-x-8 lg:flex">
             {navLinks.map((link, index) => {
               const isActive = pathname === link.href;
@@ -53,7 +53,7 @@ export default function NavBar() {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-label={isOpen ? t("closeMenu") : t("openMenu")}
           aria-expanded={isOpen}
           className="flex items-center gap-x-2 lg:hidden"
         >
@@ -71,7 +71,7 @@ export default function NavBar() {
       {isOpen && (
         <div className="absolute left-0 w-full border-t lg:hidden border-border top-full bg-bg">
           <Container className="flex flex-col py-6 gap-y-8">
-            <nav aria-label="Mobile">
+            <nav aria-label={t("mobileNavigation")}>
               <ul className="flex flex-col items-center justify-center gap-y-8">
                 {navLinks.map((link, index) => {
                   const isActive = pathname === link.href;
