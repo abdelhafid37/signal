@@ -20,14 +20,14 @@ export default function Footer({ variant = "inner" }: FooterProps) {
         <div className="flex flex-col justify-between gap-9 md:gap-0 md:flex-row">
           <div>
             <p className="mb-3 font-bold font-display">SIGNAL</p>
-            <p className="font-body text-sm text-ink-soft max-w-[240px] hidden md:block">
+            <p className="font-body text-sm text-dark-soft max-w-[240px] hidden md:block">
               {t("tagline")}
             </p>
           </div>
 
           <div className="flex gap-9 md:gap-12 xl:gap-20">
             <div className={variant === "contact" ? "hidden xl:block" : ""}>
-              <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">
+              <p className="font-mono text-[11px] uppercase tracking-widest text-dark-soft mb-4">
                 {t("sitemap")}
               </p>
 
@@ -42,7 +42,7 @@ export default function Footer({ variant = "inner" }: FooterProps) {
 
             {variant === "contact" ? (
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">
+                <p className="font-mono text-[11px] uppercase tracking-widest text-dark-soft mb-4">
                   {t("social")}
                 </p>
                 <div className="flex flex-col gap-y-2.5">
@@ -55,7 +55,7 @@ export default function Footer({ variant = "inner" }: FooterProps) {
               </div>
             ) : (
               <div className={variant === "inner" ? "hidden xl:block" : ""}>
-                <p className="font-mono text-[11px] uppercase tracking-widest text-ink-soft mb-4">
+                <p className="font-mono text-[11px] uppercase tracking-widest text-dark-soft mb-4">
                   {t("contact")}
                 </p>
                 <div className="flex flex-col gap-y-2.5">
@@ -73,7 +73,7 @@ export default function Footer({ variant = "inner" }: FooterProps) {
         </div>
 
         <div className="flex flex-col pt-6 border-t gap-y-4 md:flex-row md:items-center md:justify-between border-white/10 mt-14">
-          <p className="font-mono text-xs text-ink-soft">
+          <p className="font-mono text-xs text-dark-soft">
             <span className="xl:hidden">&copy; {t("copyright", { year: currentYear })}</span>
             <span className="hidden xl:inline">
               &copy; {t("copyrightFull", { year: currentYear })}
