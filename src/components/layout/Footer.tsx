@@ -3,6 +3,7 @@ import { navLinks, socialLinks } from "@/lib/data";
 import Dot from "../ui/Dot";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface FooterProps {
   variant?: "home" | "inner" | "contact";
@@ -79,6 +80,9 @@ export default function Footer({ variant = "inner" }: FooterProps) {
               &copy; {t("copyrightFull", { year: currentYear })}
             </span>
           </p>
+
+          <LanguageSwitcher />
+
           <p className="flex items-center font-mono text-xs gap-x-2">
             <Dot className="bg-tally animate-pulse" />
             <span className="md:hidden">{t("available")}</span>

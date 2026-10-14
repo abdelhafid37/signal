@@ -26,5 +26,6 @@
     "copyrightFull": "{year} Signal Studio. Todos los derechos reservados.",
     "available": "Disponible",
     "availableFull": "Disponible para proyectos"
-  }
+  },
+  "LanguageSwitcher": { "label": "Idioma" }
 }
